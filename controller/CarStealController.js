@@ -1,13 +1,19 @@
 var mysql = require('mysql');
 const results = [];
 
+require('dotenv').config()
+
+let host = process.env.HOST_DB
+let user = process.env.USER_DB
+let pass = process.env.PASSWORD_DB
+let database = process.env.DATABASE_DB
 
 exports.getLatLonCarSteal = function(req, res) {
   const con = mysql.createConnection({
-    host: 'yousafe-db.cyob7khpg6i0.sa-east-1.rds.amazonaws.com',
-    user: 'admin',
-    password: 'yousafe123',
-    database: 'YouSafe'
+    host: host,
+    user: user,
+    password: pass,
+    database: database
   });
 
   con.connect(function(err) {
