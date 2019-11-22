@@ -2,7 +2,7 @@ const CarSteal = require("./controller/CarStealController.js");
 const CarRob = require("./controller/CarRobController.js"); 
 const PhoneSteal = require("./controller/PhoneStealController.js");
 const PhoneRob = require("./controller/PhoneRobController.js"); 
-const database = require("./controller/Banco_YouSafe");
+const database = require("./scripts/Banco_YouSafe.js");
 
 var express = require('express');
 var app = express();
